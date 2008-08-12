@@ -30,7 +30,7 @@ To test this, you have to edit <tt>/etc/hosts</tt>, putting there lines like:
   127.0.0.1 application.com
   127.0.0.1 application.cz
 
-Then just load your application as usual at http://application.cz:3000 or http://application.com:3000 
+Then just load your application as usual at <tt>http://application.cz:3000</tt> or <tt>http://application.com:3000</tt> 
 and you should see the locale being switched
 
 
