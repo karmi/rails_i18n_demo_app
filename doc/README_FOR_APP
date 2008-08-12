@@ -25,7 +25,7 @@ from the domain: <tt>application.com</tt> loads English, <tt>application.es</tt>
 for content heavy websites and search engines love it.
 
 The <tt>ApplicationController#extract_locale_from_uri</tt> sets locale from the domain.
-To test this, you have to edit <tt>/etc/hosts</tt>, putting there lines like:
+To test this, you have to edit <tt>/etc/hosts</tt> by inserting lines like:
 
   127.0.0.1 application.com
   127.0.0.1 application.cz
