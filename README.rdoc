@@ -8,7 +8,7 @@ http://www.almosteffortless.com/2008/07/21/simple-localization-in-rails-22
 Tries to set some reasonable pattern to load translation files and set locale 
 either from request domain (.com, .de, etc) or request params.
 
-<b>Includes translation file<b> for Czech language so you can easily roll your own Spanish, German, Polish, 
+*Includes translation file* for Czech language so you can easily roll your own Spanish, German, Polish, 
 etc version just by duplicating the file, renaming it and changing the translation strings. 
 After server restart you should see your language in language bar at the top of the page.
 
@@ -21,11 +21,11 @@ You <b>have to to run edge Rails</b> for this app to work. Run this command in t
 == About setting the locale from the request domain
 
 Usually the most sane approach to setting locale/language version of the application is 
-from the domain: application.com loads English, application.es Spanish. This works best
+from the domain: <tt>application.com</tt> loads English, <tt>application.es</tt> Spanish. This works best
 for content heavy websites and search engines love it.
 
 The <tt>ApplicationController#extract_locale_from_uri</tt> sets locale from the domain.
-To test it, you have to edit <tt>/etc/hosts</tt> putting there lines along the:
+To test this, you have to edit <tt>/etc/hosts</tt>, putting there lines like:
 
 127.0.0.1 application.com
 127.0.0.1 application.cz
