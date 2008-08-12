@@ -1,0 +1,30 @@
+<h1>Editing book</h1>
+
+<% form_for(@book) do |f| %>
+  <%= f.error_messages %>
+  
+  <%= hidden_field_tag :locale, I18n.locale %>
+
+  <p>
+    <%= f.label :author %><br />
+    <%= f.text_field :author %>
+  </p>
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :published_on %><br />
+    <%= f.date_select :published_on %>
+  </p>
+  <p>
+    <%= f.label :items %><br />
+    <%= f.text_field :items %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @book %> |
+<%= link_to 'Back', books_path %>

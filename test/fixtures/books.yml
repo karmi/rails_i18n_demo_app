@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  author: Franz Kafka
+  title: Promena
+  published_on: 2008-08-12
+  items: 1
+
+two:
+  author: Thomas Bernhard
+  title: Myceni
+  published_on: 2008-08-12
+  items: 1

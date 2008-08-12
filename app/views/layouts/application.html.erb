@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title><%= controller.controller_name %>: <%= controller.action_name %></title>
+  <%= stylesheet_link_tag 'scaffold' %>
+  <style type="text/css" media="screen">
+    h2             { color: #fff; background: #333; padding: 1em; }
+    #locale_menu   { font-weight: bold; padding: 0 0 1.2em 1.5em; border-bottom: 2px solid #999; }
+  </style>
+</head>
+<body>
+  
+<h2><%= t :locale, :default => 'Locale' %>: <%= I18n.locale %></h2>
+
+<div id="locale_menu"><%= render :partial => "shared/locales" %></div>
+
+<div><%= link_to "Locale test", root_path %> &nbsp; | &nbsp; <%= link_to "ActiveRecord Test", books_path %></div>
+  
+
+<p style="color: green"><%= flash[:notice] %></p>
+
+<%= yield  %>
+
+</body>
+</html>
