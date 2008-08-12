@@ -1,6 +1,6 @@
 = Demo application for Rails internalization API
 
-Simple & minimal Rails application to test the new Rails internalization and localization API
+Simple & minimal Rails application to test the new Rails internationalization and localization API
 
 It evolved from following excellent review from Trevor Turk, available at 
 http://www.almosteffortless.com/2008/07/21/simple-localization-in-rails-22
