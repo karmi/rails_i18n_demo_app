@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
     
   before_filter :set_locale
   
-  helper_method :available_locales, :current_locale?
+  helper_method :available_locales, :current_locale?, :current_page_path
 
 
   def set_locale
@@ -22,6 +22,10 @@ class ApplicationController < ActionController::Base
   
   def current_locale?(l)
     l == I18n.locale
+  end
+  
+  def current_page_path(options={})
+    url_for( {:controller => self.controller_name, :action => self.action_name}.merge(options) )
   end
   
   private

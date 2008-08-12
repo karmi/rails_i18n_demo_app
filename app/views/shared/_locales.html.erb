@@ -1,6 +1,6 @@
 <%= t :switch_locale, :default => 'Locales:' %>
 
 <%- available_locales.each do |locale| -%>
-<%= link_to_unless current_locale?(locale), locale, root_path(:locale => locale) %>
+<%= link_to_unless current_locale?(locale), locale, current_page_path(:locale => locale) %>
 <%= ' &nbsp; | &nbsp;' unless locale == available_locales.last %>
 <%- end -%>

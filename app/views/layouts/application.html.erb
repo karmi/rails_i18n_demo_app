@@ -17,7 +17,7 @@
 
 <div id="locale_menu"><%= render :partial => "shared/locales" %></div>
 
-<div><%= link_to "Locale test", root_path %> &nbsp; | &nbsp; <%= link_to "ActiveRecord Test", books_path %></div>
+<div><%= link_to "Locale test", root_path(:locale => I18n.locale) %> &nbsp; | &nbsp; <%= link_to "ActiveRecord Test", books_path(:locale => I18n.locale) %></div>
   
 
 <p style="color: green"><%= flash[:notice] %></p>
