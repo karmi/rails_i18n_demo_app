@@ -1,22 +1,22 @@
 <h3><%= t :static_strings, :default => 'Static strings' %></h3>
 
-<p><%= t :hello_world, :default => 'Hello World!' %></p>
+<p class="hello_world"><%= t :hello_world, :default => 'Hello World!' %></p>
 
 <p><%= @good_bye %></p>
 
 <h3><%= t :numbers, :default => 'Numbers' %></h3>
 
-<p><%= number_to_currency 1024 %></p>
+<p class="currency"><%= number_to_currency 1024 %></p>
 
-<p><%= number_to_human_size 1_000_000 %></p>
+<p class="filesize"><%= number_to_human_size 1_000_000 %></p>
 
 <h3><%= t :time_and_date, :default => 'Time &amp; Date' %></h3>
 
-<p><small><code>Time.now:</code></small> <%= Time.now %></p>
+<p><small><code>Time.now:</code></small> <span class="time_now"><%= Time.now %></span></p>
 
-<p><small><code>I18n.l Time.now:</code></small> <%= I18n.l Time.now %></p>
+<p><small><code>I18n.l Time.now:</code></small> <span class="localized_time_now"><%= I18n.l Time.now %></span></p>
 
-<p><small><code>I18n.l Time.now.to_date:</code></small> <%= I18n.l Time.now.to_date %></p>
+<p><small><code>I18n.l Time.now.to_date:</code></small> <span class="localized_date"><%= I18n.l Time.now.to_date %></span></p>
 
 <p><small><code>I18n.l Time.now, :locale => 'cz':</code></small> <%= I18n.l Time.now, :locale => 'cz' %></p>
 
