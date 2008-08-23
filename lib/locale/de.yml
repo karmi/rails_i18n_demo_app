@@ -136,5 +136,5 @@ de:
       template: 
         header: 
           one: "{{count}} Fehler: Das Objekt konnte nicht gespeichert werden."
-          many: "{{count}} Fehler: Das Objekt konnte nicht gespeichert werden."
+          other: "{{count}} Fehler: Das Objekt konnte nicht gespeichert werden."
         body: "Die folgenden Fehler traten auf:"

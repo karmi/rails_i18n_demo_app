@@ -91,43 +91,43 @@
         :half_a_minute => 'půl minutou',
         :less_than_x_seconds => {
           :one => 'asi před sekundou', 
-          :many => 'asi před {{count}} sekundami'
+          :other => 'asi před {{count}} sekundami'
         },
         :x_seconds => {
           :one => 'sekundou', 
-          :many => '{{count}} sekundami'
+          :other => '{{count}} sekundami'
         },
         :less_than_x_minutes => {
           :one => 'před necelou minutou', 
-          :many => 'před ani ne {{count}} minutami'
+          :other => 'před ani ne {{count}} minutami'
         },
         :x_minutes => {
           :one => 'minutou', 
-          :many => '{{count}} minutami'
+          :other => '{{count}} minutami'
         },
         :about_x_hours => {
           :one => 'asi hodinou',
-          :many => 'asi {{count}} hodinami'
+          :other => 'asi {{count}} hodinami'
         },
         :x_days => {
           :one => '24 hodinami', 
-          :many => '{{count}} dny'
+          :other => '{{count}} dny'
         },
         :about_x_months => {
           :one => 'asi měsícem', 
-          :many => 'asi {{count}} měsíci'
+          :other => 'asi {{count}} měsíci'
         },
         :x_months => {
           :one => 'měsícem', 
-          :many => '{{count}} měsíci'
+          :other => '{{count}} měsíci'
         },
         :about_x_years => {
           :one => 'asi rokem', 
-          :many => 'asi {{count}} roky'
+          :other => 'asi {{count}} roky'
         },
         :over_x_years => {
           :one => 'více než před rokem', 
-          :many => 'více než {{count}} roky'
+          :other => 'více než {{count}} roky'
         }
       }
     },
@@ -159,7 +159,7 @@
         :template => {
           :header   => {
             :one => "Při ukládání objektu {{model}} došlo k chybám a nebylo jej možné uložit", 
-            :many => "Při ukládání objektu {{model}} došlo ke {{count}} chybám a nebylo možné jej uložit"
+            :other => "Při ukládání objektu {{model}} došlo ke {{count}} chybám a nebylo možné jej uložit"
           },
           :body  => "Následující pole obsahují chybně vyplněné údaje:"
         }
