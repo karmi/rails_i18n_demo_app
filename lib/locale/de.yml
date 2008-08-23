@@ -1,0 +1,140 @@
+# German translation file for standard Rails internalization
+# See www.rails-i18n.org for more information about Rails i18n 
+# 
+# NOTE: In real world you would obviously split this file into more pieces and load them separately
+
+de:
+  # Static texts
+  locale: Sprache
+  hello_world: Hallo Welt!
+  good_bye: Auf Wiedersehen!
+  static_strings: Statischer Text
+  numbers: Zahlen
+  time_and_date: Zeit & Datum
+  array: Array
+
+  # ActiveSupport
+  support:
+    array: 
+      sentence_connector: und
+      skip_last_comma: true
+
+  # Date
+  date: 
+    formats: 
+      default: "%d. %m. %Y"
+      short: "%d %b"
+      long: "%d. %B %Y"    
+    day_names: 
+      - Sonntag
+      - Montag
+      - Dienstag
+      - Mittwoch
+      - Donnerstag
+      - Freitag
+      - Samstag
+    abbr_day_names: 
+      - So 
+      - Mo 
+      - Di 
+      - Mi 
+      - Do 
+      - Fr 
+      - Sa
+    month_names:  
+      - Januar 
+      - Februar 
+      - März 
+      - April 
+      - Mai 
+      - Juni 
+      - Juli 
+      - August 
+      - September 
+      - Oktober 
+      - November 
+      - Dezember
+    abbr_month_names:  
+      - Jan 
+      - Feb 
+      - Mrz 
+      - Apr 
+      - Mai 
+      - Jun 
+      - Jul 
+      - Aug 
+      - Sep 
+      - Okt 
+      - Nov 
+      - Dez
+    order: 
+      - :day 
+      - :month 
+      - :year
+
+  # Time
+  time: 
+    formats: 
+      default: "%a %d. %B %Y %H:%M %z"
+      short: "%d. %m. %H:%M"
+      long: "%A %d. %B %Y %H:%M"
+    am: am
+    pm: pm
+
+  # Numbers
+  number: 
+    format: 
+      precision: 3
+      separator: ''
+      delimiter: '.'
+    
+    currency: 
+      format: 
+        unit: Eu
+        precision: 2
+        format: "%n %u"
+        separator: ''
+        delimiter: '.'
+    
+    human: 
+      format: 
+        precision: 1
+        delimiter: ''
+    
+    percentage: 
+      format: 
+        delimiter: ''
+    
+    precision: 
+      format: 
+        delimiter: ''
+
+  # ActiveRecord validation messages
+  activerecord: 
+    errors: 
+      messages: 
+        inclusion: ist in der Liste nicht enthalten
+        exclusion: ist reserviert
+        invalid: ist ungültig
+        confirmation: wurde nicht bestätigt
+        accepted: muß akzeptiert werden
+        empty: kann nicht leer sein
+        blank: kann nicht leer sein
+        too_long: ist zu lang (maximal count Zeichen)
+        too_short: ist zu kurz (mindestens count Zeichen)
+        wrong_length: hat die falsche Länge (muß count Zeichen lang sein)
+        taken: ist bereits vergeben
+        not_a_number: ist keine Zahl
+        greater_than: muß größer sein als count
+        greater_than_or_equal_to: muß größer oder gleich count sein
+        equal_to: muß gleich count sein
+        less_than: muß kleiner sein als count
+        less_than_or_equal_to: muß kleiner oder gleich count sein
+        odd: muß ungerade sein
+        even: muß gerade sein
+      
+      template: 
+        header: 
+          one: "{{count}} Fehler: Das Objekt konnte nicht gespeichert werden."
+          many: "{{count}} Fehler: Das Objekt konnte nicht gespeichert werden."
+        body: "Die folgenden Fehler traten auf:"
