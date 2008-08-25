@@ -9,11 +9,7 @@
 #   end
 # end
 
-require 'i18n/backend/chain'
-
-# will be populated to the simple backend
 I18n.populate do
   I18n.load_translations "#{RAILS_ROOT}/lib/locale/cz.rb"
   I18n.load_translations "#{RAILS_ROOT}/lib/locale/de.yml"
-  I18n.load_translations "#{RAILS_ROOT}/lib/locale/en-US.yml"
 end
