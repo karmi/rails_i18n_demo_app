@@ -12,6 +12,10 @@ de:
   numbers: Zahlen
   time_and_date: Zeit & Datum
   array: Array
+  messages:
+    zero: "keine Nachrichten"
+    one: "eine Nachricht"
+    other: "{{count}} Nachrichten"
 
   # ActiveSupport
   support:
