@@ -17,10 +17,10 @@
     :time_and_date  => 'Datum a čas',
     :array          => 'Pole',
     :messages       => {
-      :zero  => "czech translation for: no messages",
-      :one   => "czech translation for: one message",
-      :few   => "czech translation for: {{count}} (few) messages",
-      :other => "czech translation for: {{count}} (many) messages",
+      :zero  => "žádné zprávy",
+      :one   => "jedna zpráva",
+      :few   => "{{count}} zprávy",
+      :other => "{{count}} zpráv",
     },
 
     # ActiveSupport
