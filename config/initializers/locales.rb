@@ -9,7 +9,7 @@
 #   end
 # end
 
-require 'i18n/backend/chain'
+# require 'i18n/backend/chain'
 
 # will be populated to the simple backend
 I18n.populate do
