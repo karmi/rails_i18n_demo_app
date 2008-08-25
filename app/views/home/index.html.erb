@@ -4,6 +4,14 @@
 
 <p><%= @good_bye %></p>
 
+<p>
+  Pluralized strings:<br>  
+  <%= t :messages, :count => 0 %><br>
+  <%= t :messages, :count => 1 %><br>
+  <%= t :messages, :count => 2 %><br>
+  <%= t :messages, :count => 10 %><br>
+</p>
+
 <h3><%= t :numbers, :default => 'Numbers' %></h3>
 
 <p class="currency"><%= number_to_currency 1024 %></p>
