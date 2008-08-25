@@ -17,7 +17,7 @@ class HomeControllerTest < ActionController::TestCase
     assert_equal "Nashledanou!", assigns(:good_bye)
     assert_select 'p.hello_world', :text => 'Dobrý den!'
     assert_select 'p.currency',    :text => '1 024,00 Kč'
-    assert_select 'span.localized_date',    :text => Date.today.strftime("22. 08. 2008")
+    assert_select 'span.localized_date',    :text => Date.today.strftime("%d. %m. %Y")
   end
   
 end

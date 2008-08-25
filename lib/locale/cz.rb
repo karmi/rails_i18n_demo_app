@@ -159,7 +159,8 @@
         :template => {
           :header   => {
             :one => "Při ukládání objektu {{model}} došlo k chybám a nebylo jej možné uložit", 
-            :other => "Při ukládání objektu {{model}} došlo ke {{count}} chybám a nebylo možné jej uložit"
+            # FIXME: Stil "many" in edge
+            :many => "Při ukládání objektu {{model}} došlo ke {{count}} chybám a nebylo možné jej uložit"
           },
           :body  => "Následující pole obsahují chybně vyplněné údaje:"
         }
