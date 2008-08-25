@@ -1,0 +1,6 @@
+en-US:
+  # Static texts
+  messages:
+    zero: "no messages"
+    one: "one message"
+    other: "{{count}} messages"
