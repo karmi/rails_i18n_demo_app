@@ -14,13 +14,13 @@ After server restart you should see your language in language bar at the top of 
 
 == Installation & Requirements
 
-1. Download & unpack archive or <tt>git clone</tt> from Github [http://github.com/karmi/rails_i18n_demo_app]
+* Download & unpack archive or <tt>git clone</tt> from Github [http://github.com/karmi/rails_i18n_demo_app]
 
-2. You <b>have to to run edge Rails</b> for this app to work. Run this command in the app directory:
+* You <b>have to to run edge Rails</b> for this app to work. Run this command in the app directory:
 
   rake rails:freeze:edge
   
-3. Run <tt>script/server</tt>
+* Run <tt>script/server</tt> and point your browser at http://localhost:3000
 
 == About setting the locale from the request domain
 
