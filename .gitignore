@@ -4,4 +4,4 @@ log/*.log
 tmp/**/*
 db/*.sqlite3
 doc/app/
-vendor/rails
+vendor/rails/*
