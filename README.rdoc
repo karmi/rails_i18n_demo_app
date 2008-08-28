@@ -12,11 +12,15 @@ either from request domain (.com, .de, etc) or request params.
 etc version just by duplicating the file, renaming it and changing the translation strings. 
 After server restart you should see your language in language bar at the top of the page.
 
-== Requirements
+== Installation & Requirements
 
-You <b>have to to run edge Rails</b> for this app to work. Run this command in the app directory:
+1. Download & unpack archive or <tt>git clone</tt> from Github [http://github.com/karmi/rails_i18n_demo_app]
+
+2. You <b>have to to run edge Rails</b> for this app to work. Run this command in the app directory:
 
   rake rails:freeze:edge
+  
+3. Run <tt>script/server</tt>
 
 == About setting the locale from the request domain
 
