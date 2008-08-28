@@ -1,7 +1,7 @@
 # Default locale for standard Rails internalization
 # See www.rails-i18n.org for more information about Rails i18n 
 
-I18n.backend.store_translations :'en-US', {
+{ :"en-US" => {
   
   # == ActiveSupport
   # <tt>activesupport/lib/active_support/locale/en-US.rb</tt>
@@ -119,4 +119,5 @@ I18n.backend.store_translations :'en-US', {
     }            
   }
   
+ }
 }
