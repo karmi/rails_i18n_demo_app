@@ -28,6 +28,6 @@
 
 <p><small>Debug:</small></p>
 
-<%# debug I18n.backend.send(:class_variable_get, :@@translations).keys %>
+<%# debug I18n.backend.send(:instance_variable_get, :@translations).keys %>
 
 <%# debug I18n.backend.public_methods.sort %>
