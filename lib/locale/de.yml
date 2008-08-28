@@ -2,6 +2,8 @@
 # See www.rails-i18n.org for more information about Rails i18n 
 # 
 # NOTE: In real world you would obviously split this file into more pieces and load them separately
+# 
+# # Translation by Sven Fuchs (http://www.artweb-design.de/svenfuchs)
 
 de:
   # Static texts
