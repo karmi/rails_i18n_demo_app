@@ -15,7 +15,7 @@ class ApplicationController < ActionController::Base
   end
   
   def available_locales
-    AVAILABLE_LOCALES
+    AVAILABLE_LOCALES # See config/initializers/locales.rb
   end
   
   def current_locale?(l)
