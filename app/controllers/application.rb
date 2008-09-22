@@ -15,9 +15,7 @@ class ApplicationController < ActionController::Base
   end
   
   def available_locales
-    Rails.cache.fetch('locales') do
-      I18n.backend.send(:instance_variable_get, :@translations).keys.collect { |l| l.to_s }
-    end
+    AVAILABLE_LOCALES
   end
   
   def current_locale?(l)
