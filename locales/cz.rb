@@ -34,8 +34,8 @@
       },
       :day_names         => %w{Sobota Neděle Pondělí Úterý Středa Čtvrtek Pátek},
       :abbr_day_names    => %w{So Ne Po Út St Čt Pá},
-      :month_names       => %w{Leden Únor Březen Duben Květen Červen Červenec Srpen Září Říjen Listopad Prosinec},
-      :abbr_month_names  => %w{Led Úno Bře Dub Kvě Čvn Čvc Srp Zář Říj Lis Pro},
+      :month_names       => %w{~ Leden Únor Březen Duben Květen Červen Červenec Srpen Září Říjen Listopad Prosinec},
+      :abbr_month_names  => %w{~ Led Úno Bře Dub Kvě Čvn Čvc Srp Zář Říj Lis Pro},
       :order             => [:day, :month, :year]
     },
   
@@ -132,8 +132,9 @@
       }
     },
 
-    # ActiveRecord validation messages
+    # ActiveRecord
     :activerecord => {
+      # Validation messages
       :errors => {
         :messages => {
           :inclusion           => "není v seznamu povolených hodnot",
@@ -163,6 +164,18 @@
           },
           :body  => "Následující pole obsahují chybně vyplněné údaje:"
         }
+      },
+      # Your model names and attributes
+      :models => {
+        :book => "Kniha",
+      },
+      :attributes => {
+        :book => {
+          :author => "Autor",
+          :title  => "Název",
+          :published_on  => "Publikováno dne",
+          :items  => "Kusů na skladě"
+        },
       }
     }
   }
