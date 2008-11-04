@@ -10,8 +10,8 @@ class ApplicationController < ActionController::Base
 
 
   def set_locale
-    I18n.locale = extract_locale_from_params || extract_locale_from_uri || 'en-US'
     logger.debug "* Available locales are: #{I18n.backend.available_locales.inspect}"
+    I18n.locale = extract_locale_from_params || extract_locale_from_uri || I18n.default_locale
     logger.debug "* Locale set to '#{I18n.locale}'"
   end
   
