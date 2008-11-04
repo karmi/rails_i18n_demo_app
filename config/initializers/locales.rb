@@ -1,6 +1,6 @@
 # Load locales from RAILS_ROOT/lib/locale directory into Rails
 I18n.load_path += Dir[ File.join(RAILS_ROOT, 'locales', '*.{rb,yml}') ]
-# 
+
 # Get loaded locales conveniently
 # See http://rails-i18n.org/wiki/pages/i18n-available_locales
 module I18n
@@ -13,3 +13,6 @@ module I18n
     end
   end
 end
+
+# You STILL need to do this hack, so <tt>I18n.available_locales</tt> actually returns something?
+I18n.backend.send(:init_translations)
