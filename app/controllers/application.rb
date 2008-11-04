@@ -11,11 +11,12 @@ class ApplicationController < ActionController::Base
 
   def set_locale
     I18n.locale = extract_locale_from_params || extract_locale_from_uri || 'en-US'
-    logger.debug "Locale set to '#{I18n.locale}'"
+    logger.debug "* Available locales are: #{I18n.backend.available_locales.inspect}"
+    logger.debug "* Locale set to '#{I18n.locale}'"
   end
   
   def available_locales
-    AVAILABLE_LOCALES # See config/initializers/locales.rb
+    I18n.backend.available_locales
   end
   
   def current_locale?(l)
