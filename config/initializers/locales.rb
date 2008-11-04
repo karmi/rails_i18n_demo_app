@@ -1,5 +1,5 @@
 # Load locales from RAILS_ROOT/lib/locale directory into Rails
-I18n.load_path += Dir[ File.join(RAILS_ROOT, 'lib', 'locale', '*.{rb,yml}') ]
+I18n.load_path += Dir[ File.join(RAILS_ROOT, 'locales', '*.{rb,yml}') ]
 # 
 # Get loaded locales conveniently
 # See http://rails-i18n.org/wiki/pages/i18n-available_locales
