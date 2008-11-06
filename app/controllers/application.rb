@@ -16,7 +16,8 @@ class ApplicationController < ActionController::Base
   end
   
   def available_locales
-    I18n.backend.available_locales
+    # I18n.backend.available_locales
+    AVAILABLE_LOCALES
   end
   
   def current_locale?(l)

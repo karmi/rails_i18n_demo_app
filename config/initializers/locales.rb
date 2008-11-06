@@ -16,3 +16,5 @@ end
 
 # You STILL need to do this hack, so <tt>I18n.available_locales</tt> actually returns something?
 I18n.backend.send(:init_translations)
+
+AVAILABLE_LOCALES = I18n.backend.available_locales
