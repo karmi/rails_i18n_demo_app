@@ -42,7 +42,7 @@ class ApplicationController < ActionController::Base
   #   127.0.0.1 application.sk
   # In your /etc/hosts file to try this out
   def extract_locale_from_uri
-    parsed_locale = URI.parse(request.url).host.split('.').last.gsub(/com/, 'en-US')
+    parsed_locale = URI.parse(request.url).host.split('.').last.gsub(/com/, 'en')
     (available_locales.include? parsed_locale) ? parsed_locale  : nil
   end
   

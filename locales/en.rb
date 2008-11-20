@@ -1,10 +1,10 @@
 # Default locale for standard Rails internalization
 # See www.rails-i18n.org for more information about Rails i18n 
 
-{ :"en-US" => {
+{ :en => {
   
   # == ActiveSupport
-  # <tt>activesupport/lib/active_support/locale/en-US.rb</tt>
+  # <tt>activesupport/lib/active_support/locale/en.yml</tt>
   :support => {
     :array => {
       :sentence_connector => 'and'
@@ -40,7 +40,7 @@
   
   
   # == ActionView
-  # <tt>actionpack/lib/action_view/locale/en-US.rb</tt>
+  # <tt>actionpack/lib/action_view/locale/en.yml</tt>
   :datetime => {
     :distance_in_words => {
       :half_a_minute       => 'half a minute',
@@ -94,7 +94,7 @@
   },
   
   # == ActiveRecord
-  # <tt>activerecord/lib/active_record/locale/en-US.rb</tt>
+  # <tt>activerecord/lib/active_record/locale/en.yml</tt>
   :active_record => {
     :error_messages => {
       :inclusion => "is not included in the list",
