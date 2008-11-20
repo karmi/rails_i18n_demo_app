@@ -16,7 +16,12 @@ After server restart you should see your language in language bar at the top of 
 
 * Download & unpack archive or <tt>git clone</tt> from Github [http://github.com/karmi/rails_i18n_demo_app]
 
-* You <b>have to to run edge Rails</b> for this app to work. Run this command in the app directory:
+* You <b>have to to run on 2.2 branch of Rails or later</b> for this app to work. Run this command in the app directory:
+
+  git submodule init
+  git submodule update
+  
+* If that should blow in your face like git submodules like to do, run this:
 
   rake rails:freeze:edge
   
