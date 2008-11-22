@@ -1,12 +1,11 @@
 = Demo application for Rails internalization API
 
-Simple & minimal Rails application to test the new Rails internationalization and localization API
+Simple & minimal Rails application to test the Rails internationalization and localization API
 
-It evolved from following excellent review from Trevor Turk, available at 
-http://www.almosteffortless.com/2008/07/21/simple-localization-in-rails-22
+It shows how you can override Rails default locale/language ('en') in views, in ActiveRecord validation messages, etc. It shows you how to test internalization features.
 
 Tries to set some reasonable pattern to load translation files and set locale 
-either from request domain (.com, .de, etc) or request params.
+either from request domain (.com, .de, etc) or request params. Do not ever set locale to cookie or session, as it breaks basic assumptions about web. Read this discussion for context: http://groups.google.com/group/rails-i18n/browse_thread/thread/de73dbd1309ae640/
 
 *Includes translation file* for Czech language so you can easily roll your own Spanish, German, Polish, 
 etc version just by duplicating the file, renaming it and changing the translation strings. 
@@ -16,14 +15,13 @@ After server restart you should see your language in language bar at the top of 
 
 * Download & unpack archive or <tt>git clone</tt> from Github [http://github.com/karmi/rails_i18n_demo_app]
 
-* You <b>have to to run on 2.2 branch of Rails or later</b> for this app to work. Run this command in the app directory:
+* The application <b>requires Rails version 2.2 or later</b>. Either upgrade your Rails gem by running
 
-  git submodule init
-  git submodule update
+  $ sudo gem update rails
   
-* If that should blow in your face like git submodules like to do, run this:
+* or just download and freeze Rails into <tt>vendor/rails</tt>
 
-  rake rails:freeze:edge
+  $ rake rails:freeze:edge RELEASE=2.2.2
   
 * Run migrations (to be able to test ActiveRecord message localizations) by <tt>rake db:migrate</tt>
   
@@ -47,4 +45,5 @@ and you should see the locale being switched
 
 == About Rails i18n
 
-See http://www.rails-i18n.org and get in touch at http://groups.google.com/group/rails-i18n
+See (excellent) guide at http://guides.rails.info/i18n.html
+See http://www.rails-i18n.org for more info and get in touch at http://groups.google.com/group/rails-i18n
