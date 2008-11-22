@@ -1,13 +1,16 @@
 = Demo application for Rails internalization API
 
-Simple & minimal Rails application to test the Rails internationalization and localization API
+Simple & minimal Rails application to test the internationalization and localization features of Rails 2.2 and later. 
+I keep this application up-to-date with my current contract, so you can follow the commits for (possible) API changes and gotchas.
 
-It shows how you can override Rails default locale/language ('en') in views, in ActiveRecord validation messages, etc. It shows you how to test internalization features.
+It shows how you can override Rails default locale/language ('en') in views, in ActiveRecord validation messages, etc. 
+It shows you how to test internationalization features.
 
-Tries to set some reasonable pattern to load translation files and set locale 
-either from request domain (.com, .de, etc) or request params. Do not ever set locale to cookie or session, as it breaks basic assumptions about web. Read this discussion for context: http://groups.google.com/group/rails-i18n/browse_thread/thread/de73dbd1309ae640/
+Tries to set some reasonable pattern to load translation files and set locale either from request domain (.com, .de, etc) or request params. 
+Do not ever set locale to cookie or session, as it breaks basic assumptions about web. 
+Read this discussion for context: http://groups.google.com/group/rails-i18n/browse_thread/thread/de73dbd1309ae640/
 
-Includes translation file for Czech language so you can easily roll your own Spanish, German, Polish, 
+The application includes translation file for Czech language so you can easily roll your own Spanish, German, Polish, 
 etc version just by duplicating the file, renaming it and changing the translation strings. 
 After server restart you should see your language in language bar at the top of the page.
 
