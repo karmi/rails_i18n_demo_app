@@ -7,7 +7,7 @@ It shows how you can override Rails default locale/language ('en') in views, in 
 Tries to set some reasonable pattern to load translation files and set locale 
 either from request domain (.com, .de, etc) or request params. Do not ever set locale to cookie or session, as it breaks basic assumptions about web. Read this discussion for context: http://groups.google.com/group/rails-i18n/browse_thread/thread/de73dbd1309ae640/
 
-*Includes translation file* for Czech language so you can easily roll your own Spanish, German, Polish, 
+Includes translation file for Czech language so you can easily roll your own Spanish, German, Polish, 
 etc version just by duplicating the file, renaming it and changing the translation strings. 
 After server restart you should see your language in language bar at the top of the page.
 
@@ -17,11 +17,11 @@ After server restart you should see your language in language bar at the top of 
 
 * The application <b>requires Rails version 2.2 or later</b>. Either upgrade your Rails gem by running
 
-  $ sudo gem update rails
+    $ sudo gem update rails
   
 * or just download and freeze Rails into <tt>vendor/rails</tt>
 
-  $ rake rails:freeze:edge RELEASE=2.2.2
+    $ rake rails:freeze:edge RELEASE=2.2.2
   
 * Run migrations (to be able to test ActiveRecord message localizations) by <tt>rake db:migrate</tt>
   
