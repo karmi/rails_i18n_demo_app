@@ -13,6 +13,7 @@ de:
   static_strings: Statischer Text
   numbers: Zahlen
   time_and_date: Zeit & Datum
+  time_and_date_formats: "Sie können auch die Formaten für Zeit & Datum verwenden:"
   array: Array
 
   # ActiveSupport

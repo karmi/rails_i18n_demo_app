@@ -20,6 +20,10 @@
 
 <p><small><code>I18n.l Time.now, :locale => 'cz':</code></small> <%= I18n.l Time.now, :locale => 'cz' %></p>
 
+<p><%= t :time_and_date_formats %></p>
+
+<p><small><code>I18n.l Time.now.to_date, :format => 'short':</code></small> <span class="localized_time_now"><%= I18n.l Time.now.to_date, :format => 'short' %></span></p>
+
 <h3><%= t :array, :default => 'Array' %></h3>
 
 <p><%= [1, 2, 3].to_sentence %></p>

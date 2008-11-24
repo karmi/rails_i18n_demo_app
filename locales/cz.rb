@@ -15,6 +15,7 @@
     :static_strings => 'Statické texty',
     :numbers        => 'Čísla',
     :time_and_date  => 'Datum a čas',
+    :time_and_date_formats => 'Můžete využít také definované <em>formáty</em> data a času:',
     :array          => 'Pole',
 
     # ActiveSupport
