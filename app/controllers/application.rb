@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
 
   def set_locale
     logger.debug "* Available locales are: #{available_locales.inspect}"
-    I18n.locale = extract_locale_from_params || extract_locale_from_tld || I18n.default_locale
+    I18n.locale = extract_locale_from_params || extract_locale_from_tld || extract_locale_from_subdomain || I18n.default_locale
     logger.debug "* Locale set to '#{I18n.locale}'"
   end
   
@@ -33,15 +33,24 @@ class ApplicationController < ActionController::Base
     (available_locales.include? params[:locale]) ? params[:locale]  : nil
   end
   
-  # Get locale code from request domain
+  # Get locale code from request top-level domain (like http://application.it:3000)
   # You have to put something like:
   #   127.0.0.1 application.com
   #   127.0.0.1 application.cz
   #   127.0.0.1 application.sk
-  # In your /etc/hosts file to try this out
+  # in your /etc/hosts file to try this out locally
   def extract_locale_from_tld
     parsed_locale = request.host.split('.').last
     (available_locales.include? parsed_locale) ? parsed_locale  : nil
   end
-  
+
+  # Get locale code from request subdomain (like http://it.application.local:3000)
+  # You have to put something like:
+  #   127.0.0.1 gr.application.local
+  # in your /etc/hosts file to try this out locally
+  def extract_locale_from_subdomain
+    parsed_locale = request.subdomains.first
+    (available_locales.include? parsed_locale) ? parsed_locale  : nil
+  end
+
 end
