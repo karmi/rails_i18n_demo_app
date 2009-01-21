@@ -1,5 +1,3 @@
-require 'uri'
-
 class ApplicationController < ActionController::Base
   
   protect_from_forgery # :secret => 'ec68099bdc19048d4423999a1a439f12'
@@ -10,8 +8,8 @@ class ApplicationController < ActionController::Base
 
 
   def set_locale
-    logger.debug "* Available locales are: #{I18n.backend.available_locales.inspect}"
-    I18n.locale = extract_locale_from_params || extract_locale_from_uri || I18n.default_locale
+    logger.debug "* Available locales are: #{available_locales.inspect}"
+    I18n.locale = extract_locale_from_params || extract_locale_from_tld || I18n.default_locale
     logger.debug "* Locale set to '#{I18n.locale}'"
   end
   
@@ -21,7 +19,7 @@ class ApplicationController < ActionController::Base
   end
   
   def current_locale?(l)
-    l == I18n.locale
+    l.to_sym == I18n.locale.to_sym
   end
   
   def current_page_path(options={})
@@ -41,8 +39,8 @@ class ApplicationController < ActionController::Base
   #   127.0.0.1 application.cz
   #   127.0.0.1 application.sk
   # In your /etc/hosts file to try this out
-  def extract_locale_from_uri
-    parsed_locale = URI.parse(request.url).host.split('.').last.gsub(/com/, 'en')
+  def extract_locale_from_tld
+    parsed_locale = request.host.split('.').last
     (available_locales.include? parsed_locale) ? parsed_locale  : nil
   end
   

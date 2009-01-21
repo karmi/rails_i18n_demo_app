@@ -36,17 +36,17 @@ Usually the most sane approach to setting locale/language version of the applica
 from the domain: <tt>application.com</tt> loads English, <tt>application.es</tt> Spanish. This works best
 for content heavy websites and search engines love it.
 
-The <tt>ApplicationController#extract_locale_from_uri</tt> sets locale from the domain.
-To test this, you have to edit <tt>/etc/hosts</tt> by inserting lines like:
+The <tt>ApplicationController#extract_locale_from_tld</tt> sets locale from the top-level domain (ie. the "es" in <tt>example.es</tt> loads Spanish version).
+To test this locally, you have to edit your <tt>/etc/hosts</tt> file by inserting lines like:
 
   127.0.0.1 application.com
   127.0.0.1 application.cz
 
 Then just load your application as usual at <tt>http://application.cz:3000</tt> or <tt>http://application.com:3000</tt> 
-and you should see the locale being switched
+and you should see the locale being switched.
 
 
 == About Rails i18n
 
-See (excellent) guide at http://guides.rails.info/i18n.html
+See guide at http://guides.rails.info/i18n.html
 See http://www.rails-i18n.org for more info and get in touch at http://groups.google.com/group/rails-i18n
