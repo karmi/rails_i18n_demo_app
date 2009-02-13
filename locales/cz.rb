@@ -21,11 +21,12 @@
     # ActiveSupport
     :support => {
       :array => {
+        :two_words_connector => ' a ',
         :sentence_connector => 'a',
         :skip_last_comma => true
       }
     },
-  
+
     # Date
     :date => {
       :formats => {
@@ -39,7 +40,7 @@
       :abbr_month_names  => %w{~ Led Úno Bře Dub Kvě Čvn Čvc Srp Zář Říj Lis Pro},
       :order             => [:day, :month, :year]
     },
-  
+
     # Time
     :time => {
       :formats => {
@@ -50,7 +51,7 @@
       :am => 'am',
       :pm => 'pm'
     },
-  
+
     # Numbers
     :number => {
       :format => {
@@ -71,6 +72,16 @@
         :format => {
           :precision => 1,
           :delimiter => ''
+        },
+        :storage_units => {
+          :format => "%n %u",
+          :units => {
+            :byte => "B",
+            :kb   => "KB",
+            :mb   => "MB",
+            :gb   => "GB",
+            :tb   => "TB",
+          }
         }
       },
       :percentage => {
@@ -84,26 +95,26 @@
         }
       }
     },
-  
+
     # Distance of time ... helper
     # NOTE: In Czech language, these values are different for the past and for the future. Preference has been given to past here.
     :datetime => {
       :distance_in_words => {
         :half_a_minute => 'půl minutou',
         :less_than_x_seconds => {
-          :one => 'asi před sekundou', 
+          :one => 'asi před sekundou',
           :other => 'asi před {{count}} sekundami'
         },
         :x_seconds => {
-          :one => 'sekundou', 
+          :one => 'sekundou',
           :other => '{{count}} sekundami'
         },
         :less_than_x_minutes => {
-          :one => 'před necelou minutou', 
+          :one => 'před necelou minutou',
           :other => 'před ani ne {{count}} minutami'
         },
         :x_minutes => {
-          :one => 'minutou', 
+          :one => 'minutou',
           :other => '{{count}} minutami'
         },
         :about_x_hours => {
@@ -111,31 +122,30 @@
           :other => 'asi {{count}} hodinami'
         },
         :x_days => {
-          :one => '24 hodinami', 
+          :one => '24 hodinami',
           :other => '{{count}} dny'
         },
         :about_x_months => {
-          :one => 'asi měsícem', 
+          :one => 'asi měsícem',
           :other => 'asi {{count}} měsíci'
         },
         :x_months => {
-          :one => 'měsícem', 
+          :one => 'měsícem',
           :other => '{{count}} měsíci'
         },
         :about_x_years => {
-          :one => 'asi rokem', 
+          :one => 'asi rokem',
           :other => 'asi {{count}} roky'
         },
         :over_x_years => {
-          :one => 'více než před rokem', 
+          :one => 'více než před rokem',
           :other => 'více než {{count}} roky'
         }
       }
     },
 
-    # ActiveRecord
+    # ActiveRecord validation messages
     :activerecord => {
-      # Validation messages
       :errors => {
         :messages => {
           :inclusion           => "není v seznamu povolených hodnot",
@@ -160,12 +170,13 @@
         },
         :template => {
           :header   => {
-            :one => "Při ukládání objektu {{model}} došlo k chybám a nebylo jej možné uložit", 
+            :one => "Při ukládání objektu {{model}} došlo k chybám a nebylo jej možné uložit",
             :other => "Při ukládání objektu {{model}} došlo ke {{count}} chybám a nebylo možné jej uložit"
           },
           :body  => "Následující pole obsahují chybně vyplněné údaje:"
         }
       },
+
       # Your model names and attributes
       :models => {
         :book => "Kniha",
