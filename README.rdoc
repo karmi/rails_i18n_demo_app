@@ -1,4 +1,4 @@
-= Demo application for Rails internalization API
+= Demo application for Rails internationalization API
 
 Simple & minimal Rails application to test the internationalization and localization features of Rails 2.2 and later. 
 I keep this application up-to-date with my current contract, so you can follow the commits for (possible) API changes and gotchas.

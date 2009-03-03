@@ -1,4 +1,4 @@
-# Default locale for standard Rails internalization
+# Default locale for standard Rails internationalization
 
 # Default locale in Rails 2.2.2 is <tt>:en</tt>
 
