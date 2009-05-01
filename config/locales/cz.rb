@@ -5,7 +5,7 @@
 # 
 # Translation by Karel Minařík (karmi@karmi.cz)
 
-{ :cz => {
+{ :'cz' => {
 
     # Static texts
     :locale         => 'Jazyk',
@@ -21,9 +21,9 @@
     # ActiveSupport
     :support => {
       :array => {
+        :words_connector => ', ',
         :two_words_connector => ' a ',
-        :sentence_connector => 'a',
-        :skip_last_comma => true
+        :last_word_connector => ' a '
       }
     },
 
@@ -73,16 +73,16 @@
           :precision => 1,
           :delimiter => ''
         },
-        :storage_units => {
-          :format => "%n %u",
-          :units => {
-            :byte => "B",
-            :kb   => "KB",
-            :mb   => "MB",
-            :gb   => "GB",
-            :tb   => "TB",
-          }
-        }
+       :storage_units => {
+         :format => "%n %u",
+         :units => {
+           :byte => "B",
+           :kb   => "KB",
+           :mb   => "MB",
+           :gb   => "GB",
+           :tb   => "TB",
+         }
+       }
       },
       :percentage => {
         :format => {
@@ -175,19 +175,6 @@
           },
           :body  => "Následující pole obsahují chybně vyplněné údaje:"
         }
-      },
-
-      # Your model names and attributes
-      :models => {
-        :book => "Kniha",
-      },
-      :attributes => {
-        :book => {
-          :author => "Autor",
-          :title  => "Název",
-          :published_on  => "Publikováno dne",
-          :items  => "Kusů na skladě"
-        },
       }
     }
   }
