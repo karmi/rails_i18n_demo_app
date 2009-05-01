@@ -14,8 +14,7 @@ class ApplicationController < ActionController::Base
   end
   
   def available_locales
-    # I18n.backend.available_locales
-    AVAILABLE_LOCALES
+    I18n.available_locales
   end
   
   def current_locale?(l)
@@ -30,7 +29,7 @@ class ApplicationController < ActionController::Base
   
   # Get locale from request parameters
   def extract_locale_from_params
-    (available_locales.include? params[:locale]) ? params[:locale]  : nil
+    (available_locales.include? params[:locale].to_sym) ? params[:locale] : nil
   end
   
   # Get locale code from request top-level domain (like http://application.it:3000)
@@ -41,7 +40,7 @@ class ApplicationController < ActionController::Base
   # in your /etc/hosts file to try this out locally
   def extract_locale_from_tld
     parsed_locale = request.host.split('.').last
-    (available_locales.include? parsed_locale) ? parsed_locale  : nil
+    (available_locales.include? parsed_locale.to_sym) ? parsed_locale  : nil
   end
 
   # Get locale code from request subdomain (like http://it.application.local:3000)
@@ -50,7 +49,7 @@ class ApplicationController < ActionController::Base
   # in your /etc/hosts file to try this out locally
   def extract_locale_from_subdomain
     parsed_locale = request.subdomains.first
-    (available_locales.include? parsed_locale) ? parsed_locale  : nil
+    (available_locales.include? parsed_locale.to_sym) ? parsed_locale  : nil
   end
 
 end
