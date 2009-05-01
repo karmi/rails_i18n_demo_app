@@ -6,9 +6,7 @@ class HomeControllerTest < ActionController::TestCase
   def test_should_return_available_locales
     assert_nothing_raised { @controller.available_locales }
     assert @controller.available_locales.is_a? Array
-    assert @controller.available_locales.include?(:cz)
-    assert @controller.available_locales.include?(:de)
-    assert @controller.available_locales.include?(:en)
+    assert_equal ["cz", "de", "en"], @controller.available_locales
   end
   
   def test_should_render_proper_en_us_locale_by_default
